@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        div{
+            height: 100px;
+            width: 100px;
+        }
+        #box1{
+            background-color: red;
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        #box2{
+            background-color: yellow;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            margin-left: -50px;
+            margin-top: -50px;
+        }
+    </style>
+</head>
+<body>
+<div id="box1"></div>
+<div id="box2"></div>
+<script>
+    var oBox1 = document.getElementById("box1");
+    var oBox2 = document.getElementById("box2");
+    var eX, eY;
+    function bindEvent() {
+        oBox1.onmousedown = function (e) {
+            var event = e || window.event;
+            eX = event.clientX;
+            eY = event.clientY;
+        }
+    }
+</script>
+</body>
+</html>

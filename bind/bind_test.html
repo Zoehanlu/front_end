@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bind_test</title>
+</head>
+<body>
+<button id="btn">click</button>
+<script>
+    //bind： 修改函数的this指向，返回一个新的函数,等待某一个状态再触发，不同于call和apply
+
+    // 单对象编程
+   /* var list = {
+        init: function () {
+            this.mes = "bind 绑定";
+            this.dom = document.getElementById("btn");
+            this.bindEvent();
+        },
+        bindEvent: function () {
+            // this list
+            // this.dom.onclick = this.showMessage;  // 此时showMessage中的this指dom
+            this.dom.onclick = this.showMessage.bind(this);  // 此时showMessage中的this指list
+        },
+        showMessage: function () {
+            // this dom
+            alert(this.mes)
+            console.log(this)
+        }
+    }
+    list.init();*/
+
+    // call apply
+    /*var x =10;
+    function show(a, b) {
+        console.log(this.x, a, b)
+    }
+    show('a', 'b');  // 10 a b
+
+    var Duyio = {
+        x: 20
+    };
+    var newShow = show.bind(Duyio, 'c');
+    newShow('d');   // 20 c d*/
+
+   /* function A() {
+
+    }
+    var o = {};
+    var x = 1;
+    var y = 2;
+    var z = 3;
+    var B = A.bind(o, x, y);
+    B('c');
+
+    总结：
+    1. 函数A调用bind方法的时， 需传递的参数o, x, y, z......
+    2. 返回新的函数B
+    3. 函数B在执行的时候，具体的功能实际上还是使用的A，只不过this指向变成了o,
+    4. 函数B在执行的时候, 传递的参数会拼接到x, y, z后面， 一并在内部传递给A在执行
+    5. 当以new B(), 所放回的函数的构造函数依旧是A，而且o 不会祈祷任何作用
+    */
+
+   // 模拟实现bind方法
+    Function.prototype.newBind = function (target) {
+        // target 改变返回函数执行的this的指向
+        var self = this;
+        var args = [].slice.call(arguments, 1);
+        var temp = function () { };
+        var f = function () {
+            var _args = [].slice.call(arguments, 0)
+            // 真正执行的是self
+            return self.apply(this instanceof temp ? this : (target || window), args.concat(_args));
+        };
+        temp.prototype = self.prototype;
+        f.prototype = new temp();
+        return f;
+    };
+    function show() {
+        console.log(this)
+    }
+    var Duyio = {
+        x: 20
+    };
+    var newShow = show.newBind(Duyio);
+
+    new newShow();
+    console.log(new newShow().constructor );
+</script>
+</body>
+</html>

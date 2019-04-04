@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    // 原型 prototype
+    // 1，定义：原型是function对象的一个属性，它定义了构造函数制造出的对象的公共祖先。
+    //          通过该构造函数产生的对象，可以继承改原型的对象和方法。原型也是对象
+    // 2，利用原型的特点和概念，可以提取共有属性
+    // 3，对象如何查看原型 --> 隐式属性 __proto__
+    // 4，对象如何查看对象的构造函数 --> constructor
+    // 原型链
+    // 1,  绝大多数对象的最终都会继承自 Object.prototype 特例：Object.create(null)
+    // 2,  Object.create(原型)
+    var obj = {name: 'sunny'};
+    var obj1 = Object.create(obj);
+    // a.sayName() sayName里面的this指向谁，谁调用的这个方法，this就是指向谁
+    Person.prototype = {
+        name: 'a',
+        sayName: function () {
+            console.log(this.name)
+        }
+    }
+    function Person() {
+        this.name = 'b'
+    }
+    var person = new Person();    // b
+   /* Person.prototype.name = "sunny"
+    function Person() {
+        // var this = {
+        //     __proto__: Person.prototype
+        // }
+    }
+    Person.prototype = {    // 1
+        name: "cherry"
+    }
+    var person = new Person();   // name: cherry  当1放在下面是，name ： sunny
+*/
+
+
+
+
+</script>
+</body>
+</html>

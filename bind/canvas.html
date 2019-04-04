@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>扇形loading</title>
+    <style>
+        *{
+            margin: 0;
+        }
+        #box{
+            height: 50px;
+            width: 500px;
+            text-align: center;
+            color: red;
+            font-size: 20px;
+            font-weight: bold;
+            line-height: 50px;
+        }
+    </style>
+</head>
+<body>
+<!--画扇形-->
+<canvas id="can" height="500px" width="500px"></canvas>
+<div id="box"></div>
+<script>
+    var can = document.getElementById('can');
+    var box = document.getElementById('box');
+    var ctx = can.getContext('2d');
+    CanvasRenderingContext2D.prototype.sector = function (x, y, r, sDeg, eDeg) {
+        // 圆心点， 半径， 角度--》起始角度，终止角度
+        this.save();
+        this.beginPath();
+        this.moveTo(x, y);
+        // 角度变弧度的公式
+        this.arc(x, y, r,sDeg*Math.PI/180, eDeg*Math.PI/180, false);
+        this.closePath();
+        this.closePath();
+        this.restore();
+        return this;
+    }
+    ctx.fillStyle = 'red';
+    var timer = null, angel = 0;
+    // angel / 360 === per / 100;
+    // per = 5*angel/18
+    var per;
+    timer = setInterval(function () {
+        angel += 5;
+        ctx.sector(250, 250, 100, 0, angel).fill();
+        per = (5 * angel / 18).toFixed(2);
+        box.innerHTML = '加载中：' + per + "%";
+        if (angel === 360){
+            clearInterval(timer)
+            box.innerHTML = '加载完成';
+        }
+    }, 100);
+</script>
+</body>
+</html>

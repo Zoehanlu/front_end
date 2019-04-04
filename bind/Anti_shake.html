@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>防抖</title>
+</head>
+<!-- 函数防抖和节流， 事件的频繁触发，页面的卡顿
+防抖： 函数在需要频繁触发的情况下，只要有足够空闲的时间，才执行一次。
+       例如公交司机会等人都上车以后才出战一样
+场景:  实时搜索和拖拽
+
+节流： 预定一个函数只有在大于等于执行周期时才执行，周期内调用不执行
+       例如水滴攒到一定量才会落下
+场景： 窗口调整（resize）， 页面滚动（scroll），抢购疯狂点击（mousedown）
+-->
+<body>
+<input type="text" id="inp">
+<script>
+    var oInp = document.getElementById("inp");
+    // 封装一个防抖的函数
+    function debounce(handler, delay) {
+        var timer = null;
+        return function () {
+            var _self = this, _arg = arguments;
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                handler.apply(_self, _arg)
+            }, delay)
+        }
+    }
+    function ajax(e) {
+        console.log(e,this.value)
+    }
+    oInp.oninput = debounce(ajax, 1000)
+
+    /*
+    var timer = null;
+    oInp.oninput = function (e) {
+        console.log(arguments)
+        var _self = this, _arg = arguments;
+        clearTimeout(timer);
+        timer = setTimeout(function () {
+            ajax.apply(_self, _arg);
+        }, 1000);
+    };*/
+</script>
+</body>
+</html>
