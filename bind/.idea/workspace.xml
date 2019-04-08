@@ -1,7 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="60e1263f-9960-4f6d-9b1e-cf42d4499ab7" name="Default Changelist" comment="" />
+    <list default="true" id="60e1263f-9960-4f6d-9b1e-cf42d4499ab7" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../JS.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../JS.docx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/JSdemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/JSdemo.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../tab 垂直滑动/jqueryCzTab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tab 垂直滑动/jqueryCzTab/.idea/workspace.xml" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -16,11 +22,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JSdemo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+            <state relative-caret-position="455">
+              <caret line="97" column="70" selection-start-line="96" selection-start-column="4" selection-end-line="97" selection-end-column="70" />
               <folding>
-                <element signature="e#347#627#0" />
+                <element signature="e#121#136#0" />
+                <element signature="e#595#697#0" />
+                <element signature="e#720#751#0" />
+                <element signature="e#794#1074#0" />
+                <element signature="e#1079#1172#0" />
+                <element signature="e#1178#2499#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/bind_test.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="275">
+              <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
             </state>
           </provider>
         </entry>
@@ -33,6 +53,9 @@
         <option value="HTML File" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -50,16 +73,17 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="857" />
+    <option name="x" value="930" />
+    <option name="y" value="3" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -71,12 +95,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../tab 垂直滑动/jqueryCzTab" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="editor.preferences.fonts.default" />
   </component>
   <component name="RunDashboard">
@@ -116,14 +142,15 @@
       <workItem from="1554171754680" duration="12792000" />
       <workItem from="1554257216507" duration="14583000" />
       <workItem from="1554346512734" duration="10590000" />
+      <workItem from="1554703948982" duration="8377000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="56510000" />
+    <option name="totallyTimeSpent" value="64887000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="686" y="0" width="784" height="832" extended-state="0" />
+    <frame x="744" y="3" width="784" height="832" extended-state="0" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" weight="0.3342246" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -174,13 +201,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bind_test.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="324">
-          <caret line="76" column="6" selection-start-line="76" selection-start-column="6" selection-end-line="76" selection-end-column="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Throttling.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-43">
@@ -219,12 +239,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/bind_test.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="275">
+          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JSdemo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="25" column="9" lean-forward="true" selection-start-line="25" selection-start-column="9" selection-end-line="25" selection-end-column="9" />
+        <state relative-caret-position="455">
+          <caret line="97" column="70" selection-start-line="96" selection-start-column="4" selection-end-line="97" selection-end-column="70" />
           <folding>
-            <element signature="e#347#627#0" />
+            <element signature="e#121#136#0" />
+            <element signature="e#595#697#0" />
+            <element signature="e#720#751#0" />
+            <element signature="e#794#1074#0" />
+            <element signature="e#1079#1172#0" />
+            <element signature="e#1178#2499#0" />
           </folding>
         </state>
       </provider>

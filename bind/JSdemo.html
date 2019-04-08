@@ -40,7 +40,62 @@
     }
     var person = new Person();   // name: cherry  当1放在下面是，name ： sunny
 */
+    /*call/apply
+    作用：改变this的指向
+    区别: call: 需要把实参按照形参的个数传进去
+          apply： 需要传一个arguments*/
 
+    /*// 继承模式
+    // 1，传统模式 --->  原型链：  过多继承了没用的属性
+    // 例：
+    function Grand() {}
+    var grand  = new Grand();
+    fathor.prototype = grand;
+    function Father() {}
+    var father = new Father();
+    sun.prototype = father;
+    function Son() {}
+    var son = new Son();
+
+    // 2，借用构造函数： (1) 不能继承借用构造函数的原型 （2）每次构造函数都要多走一个函数
+    // 例：
+    function Person(name, age, sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
+    }
+    function Student(name, age, sex, grade) {
+        Person.call(this, name, age, sex);  // Person.apply(this, [name, age, sex])
+        this.grand = grade;
+    }
+    var student = new Student();
+
+    // 3，共享原型：不能随便改动自己的原型
+    // 例：
+    Father.prototype.lastName = "li";
+    function Father() {}
+    function Son() {}
+    Son.prototype = Father.prototype;
+    // 4，圣杯模式
+    // 例：
+    function inherit(Target, Origin) {
+        function F() {}
+        F.prototype = Origin.prototype;
+        Target.prototype = new F();
+        Target.prototype.constructor = Target;  //
+        Target.prototype.uber = Origin.prototype;   //超类
+    }
+    Father.prototype.lastName = "li";
+    function Father() {}
+    function Son() {}
+    inherit(Son, Father);
+    var son = new Son();
+    var father = new Father();
+    // son.__proto__ --> new F().__proto__ --> Father.prototype
+*/
+
+    命名空间：管理变量，防止污染全局，适用于模块化开发。
+    对象的枚举：1，for in 2，hasOwnProperty  3，in 4，instanceof: 看A的原型链上有没有B的原型
 
 
 
