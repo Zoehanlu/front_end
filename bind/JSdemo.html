@@ -3,11 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+    </style>
 </head>
 <body>
 
+
+
 <script>
-    // 原型 prototype
+    /*// 原型 prototype
     // 1，定义：原型是function对象的一个属性，它定义了构造函数制造出的对象的公共祖先。
     //          通过该构造函数产生的对象，可以继承改原型的对象和方法。原型也是对象
     // 2，利用原型的特点和概念，可以提取共有属性
@@ -29,7 +37,7 @@
         this.name = 'b'
     }
     var person = new Person();    // b
-   /* Person.prototype.name = "sunny"
+   /!* Person.prototype.name = "sunny"
     function Person() {
         // var this = {
         //     __proto__: Person.prototype
@@ -39,13 +47,13 @@
         name: "cherry"
     }
     var person = new Person();   // name: cherry  当1放在下面是，name ： sunny
-*/
-    /*call/apply
+*!/
+    /!*call/apply
     作用：改变this的指向
     区别: call: 需要把实参按照形参的个数传进去
-          apply： 需要传一个arguments*/
+          apply： 需要传一个arguments*!/
 
-    /*// 继承模式
+    /!*!// 继承模式
     // 1，传统模式 --->  原型链：  过多继承了没用的属性
     // 例：
     function Grand() {}
@@ -92,13 +100,107 @@
     var son = new Son();
     var father = new Father();
     // son.__proto__ --> new F().__proto__ --> Father.prototype
-*/
+*!/
 
+    /!*
     命名空间：管理变量，防止污染全局，适用于模块化开发。
     对象的枚举：1，for in 2，hasOwnProperty  3，in 4，instanceof: 看A的原型链上有没有B的原型
+    *!/
 
+    // 在try里面的发生错误，不会执行错误以后的try里面的代码
+    try{}catch(e){}  // error error.message  error.name
+    // error.name对应的信息：
+    // 1，EvalError: eval()的使用与定义不一致
+    // 2，RangeError：数组越界
+    // 3，ReferenceError：非法或者不能识别的引用数值
+    // 4，SyntaxError：语法解析错误
+    // 5，TypeError：操作数类型错误
+    // 6，URLError：URL处理函数使用不当
 
+    /!*
+    es5严格模式的启用 "use strict"
+    浏览器基于es3.0 + es5.0的新增方法使用的
+    es3.0 和es5.0产生冲突的部分
+    es5.0严格模式,那么es3.0和es5.0产生冲突的部分就用es5.0，否则会有es3.0
+    *!/*/
 
+    /*// DOM操作
+    // 封装函数insertAfter();功能类似insertBefore(a, b)
+    Element.prototype.innerAfter = function (targetNode, afterNode) {
+        var beforeNode = afterNode.nextElementSibling;
+        if (beforeNode === null){
+            this.appendChild(targetNode);
+        }else{
+            this.insertBefore(targetNode, beforeNode);
+        }
+    }
+    //定时器
+    var timer1 = setInterval(function () {}, 1000);  // 循环器
+    clearInterval(timer1);
+    var timer2 = setTimeout(function () {}, 100) // 运行一次  ==>
+    clearTimeout(timer2)*/
+
+    /*事件
+    1，ele.onxxx = function (event) {}
+    2, obj.addEventListener(type, fun, false)  ==》 removeEventListener()
+       false----冒泡    true-----捕获
+    3，obj.attachEvent('on'+type, fun)  // IE独有
+
+    事件处理模型
+    冒泡： 结构上嵌套关系的元素，子元素冒泡向父元素（自底向上）
+    捕获：结构上嵌套关系，父元素捕获至子元素（自顶向下）。
+    IE上面没有捕获事件
+    顺序：先捕获，后冒泡*/
+    /*时间对象 e
+    取消冒泡：（1）W3C标准：event.stopPropagation()
+              （2）IE独有：event.cancelBubble
+    封装取消冒泡的函数 stopBubble(event)
+    function stopBubble(event) {
+        event = event || window.event;
+        event.stopPropagation ? event.stopPropagation() : event.cancelBubble = true;
+    }
+    阻止默认事件：默认事件  -----> 表单提交，a标签跳转等
+    (1)return false: 以对象属性的方式注册的事件才生效
+    (2)event.preventDefault(): W3C标注
+    (3)event.returnValue = false: 兼容IE
+    封装阻止默认事件的函数cancelHandler(event)
+    function cancelHandler(event) {
+        event = event || window.event;
+        if(event.preventDefault){
+            event.preventDefault();
+        }else{
+            event.returnValue = false;
+        }
+    }
+    事件委托：利用事件冒泡和事件源对象进行处理
+    优点：（1）性能不需要循环所有的元素一个个绑定事件
+          （2）灵活 当有新的子元素时不需要重新绑定事件*/
+
+    function loadScript(url, callBack) {
+        var script = document.createElement('script');
+        script.type = "text/javascript";
+        if(script.readyState){
+            script.onreadystatechange = function () {
+                // IE的script只有onreadystatechange（），别的标签都有onload
+                if(script.readyState === 'complete' || script.readyState === 'loaded') {
+                    callBack();
+                }
+            }
+        }else {
+            script.onload = function(){
+                // Safari、chrome、firefox、opera的script标签才有onload
+                callBack();
+            }
+        }
+        script.src = url; //  js/demo.js
+        document.head.appendChild(script);
+    }
+    loadScript("js/demo.js", function () {
+        test();
+    })
+
+    // 正则表达式  RegExp
+    // 转义字符： \（反斜杠）
 </script>
 </body>
 </html>

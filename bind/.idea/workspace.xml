@@ -2,11 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="60e1263f-9960-4f6d-9b1e-cf42d4499ab7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/demo.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../JS.docx" beforeDir="false" afterPath="$PROJECT_DIR$/../JS.docx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/JSdemo.html" beforeDir="false" afterPath="$PROJECT_DIR$/JSdemo.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../tab 垂直滑动/jqueryCzTab/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../tab 垂直滑动/jqueryCzTab/.idea/workspace.xml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,16 +21,25 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JSdemo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="455">
-              <caret line="97" column="70" selection-start-line="96" selection-start-column="4" selection-end-line="97" selection-end-column="70" />
+            <state relative-caret-position="25">
+              <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
               <folding>
-                <element signature="e#121#136#0" />
-                <element signature="e#595#697#0" />
-                <element signature="e#720#751#0" />
-                <element signature="e#794#1074#0" />
-                <element signature="e#1079#1172#0" />
-                <element signature="e#1178#2499#0" />
+                <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+                <element signature="e#207#3169#0" />
+                <element signature="e#3175#3706#0" />
+                <element signature="e#3712#4019#0" />
+                <element signature="e#4056#4835#0" />
+                <element signature="e#4826#4842#0" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/js/demo.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="75">
+              <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -51,6 +59,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="JavaScript File" />
       </list>
     </option>
   </component>
@@ -68,14 +77,15 @@
         <option value="$PROJECT_DIR$/canvas.html" />
         <option value="$PROJECT_DIR$/resizeTwo.html" />
         <option value="$PROJECT_DIR$/tab.html" />
+        <option value="$PROJECT_DIR$/js/demo.js" />
         <option value="$PROJECT_DIR$/JSdemo.html" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="930" />
-    <option name="y" value="3" />
-    <option name="width" value="980" />
+    <option name="x" value="467" />
+    <option name="y" value="78" />
+    <option name="width" value="1054" />
     <option name="height" value="1040" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -84,6 +94,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -91,11 +102,15 @@
               <item name="bind" type="b2602c69:ProjectViewProjectNode" />
               <item name="bind" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="bind" type="b2602c69:ProjectViewProjectNode" />
+              <item name="bind" type="462c0819:PsiDirectoryNode" />
+              <item name="js" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -143,16 +158,18 @@
       <workItem from="1554257216507" duration="14583000" />
       <workItem from="1554346512734" duration="10590000" />
       <workItem from="1554703948982" duration="8377000" />
+      <workItem from="1554874111676" duration="12555000" />
+      <workItem from="1554948553398" duration="10642000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="64887000" />
+    <option name="totallyTimeSpent" value="88084000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="744" y="3" width="784" height="832" extended-state="0" />
+    <frame x="374" y="63" width="843" height="832" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.3342246" />
+      <window_info content_ui="combo" id="Project" order="0" weight="0.33333334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -171,7 +188,7 @@
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
     </layout>
     <layout-to-restore>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.3342246" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.33333334" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -246,17 +263,24 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/js/demo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="3" column="1" lean-forward="true" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JSdemo.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="455">
-          <caret line="97" column="70" selection-start-line="96" selection-start-column="4" selection-end-line="97" selection-end-column="70" />
+        <state relative-caret-position="25">
+          <caret line="1" column="16" lean-forward="true" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
           <folding>
-            <element signature="e#121#136#0" />
-            <element signature="e#595#697#0" />
-            <element signature="e#720#751#0" />
-            <element signature="e#794#1074#0" />
-            <element signature="e#1079#1172#0" />
-            <element signature="e#1178#2499#0" />
+            <element signature="n#script#0;n#body#0;n#html#0;n#!!top" />
+            <element signature="e#207#3169#0" />
+            <element signature="e#3175#3706#0" />
+            <element signature="e#3712#4019#0" />
+            <element signature="e#4056#4835#0" />
+            <element signature="e#4826#4842#0" />
           </folding>
         </state>
       </provider>
