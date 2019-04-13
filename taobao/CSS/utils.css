@@ -1,0 +1,27 @@
+*{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    text-decoration: none;
+    color: #333;
+}
+body {
+    font: 12px/1.5 tahoma,arial,'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+}
+input:focus, textarea:focus, select:focus {
+    border: none;
+}
+.clear::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+.inline-block{
+    display: inline-block;
+}
+.left {
+     float: left;
+}
+.right {
+    float: right;
+}

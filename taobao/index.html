@@ -2,83 +2,37 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
-    <style>
-        *{
-            padding: 0;
-            margin: 0;
-        }
-        a{
-            display: inline-block;
-            text-decoration: none;
-            color: #424242;
-            width: 190px;
-            height: 0;          /* 主要三句 */
-            padding-top: 90px;  /* 在padding部分显示图片*/
-            overflow: hidden;  /* 超出隐藏 */
-            background-image: url("http://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-        }
-        /*a{
-            display: inline-block;
-            text-decoration: none;
-            color: #424242;
-            width: 190px;
-            height: 90px;          !* 主要四句 *!
-            white-space: nowrap;  !* 不换行 *!
-            overflow: hidden;   !* 超出隐藏 *!
-            text-indent: 200px;   !*大于或者等于width*!
-            background-image: url("http://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png");
-            background-size: contain;
-            background-repeat: no-repeat;
-        }*/
-    </style>
+    <title>淘宝</title>
+    <link rel="stylesheet" type="text/css" href="./CSS/utils.css">
+    <link rel="stylesheet" type="text/css" href="./CSS/index.css">
 </head>
 <body>
-<a href="https://www.taobao.com/" target="_blank">淘宝网</a>
-<!--
-!important
-行间样式
-ID
-class| 属性| 伪类
-标签 | 伪元素（before、after、first-line、first-letter.....）
-通配符
-
--->
-
-<!--文本溢出， 要打点展示
-1，单行文本
-   white-space: nowrap; /*不换行*/
-   overflow: hidden;
-   text-overflow: ellipsis;
-2，多行文本: 一般多行截断
-   或者：
-   .twoLine {
-    overflow: hidden;
-    text-overflow: ellipsis;
-    display: -webkit-box;
-    -webkit-line-clamp: 3;
-    -webkit-box-orient: vertical;
-}
--->
-<!--图片与文字兼容问题
-1，
-a{
-            display: inline-block;
-            text-decoration: none;
-            color: #424242;
-            width: 190px;
-            height: 0;          /* 主要三句 */
-            padding-top: 90px;  /* 在padding部分显示图片*/
-            overflow: hidden;  /* 超出隐藏 */
-            background-image: url("http://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png");
-            background-size: contain;
-            background-repeat: no-repeat;
- }
-
-
-
--->
+<!--第一部分： 头部-->
+<header class="header-wrapper clear">
+    <div class="left logo-wrapper">
+        <a href="https://www.taobao.com" class="logo inline-block">淘宝网</a>
+    </div>
+    <div class="search-box inline-block">
+        <ul class="search-tips">
+            <li class="inline-block">宝贝</li>
+            <li class="inline-block">天猫</li>
+            <li class="inline-block">店铺</li>
+        </ul>
+        <div class="search-wrapper">
+            <input class="input-search" type="text" placeholder="新款连衣裙">
+            <div class="search-btn">搜索</div>
+        </div>
+        <ul class="search-best">
+            <li class="inline-block">新款连衣裙</li>
+            <li class="inline-block">四件套</li>
+            <li class="inline-block">墙纸</li>
+        </ul>
+    </div>
+    <div class="code-wrapper right">
+        <div class="img-tips">手机淘宝</div>
+        <div class="img-bac"></div>
+    </div>
+</header>
+<section class=""></section>
 </body>
 </html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+        a{
+            display: inline-block;
+            text-decoration: none;
+            color: #424242;
+            width: 190px;
+            height: 0;          /* 主要三句 */
+            padding-top: 90px;  /* 在padding部分显示图片*/
+            overflow: hidden;  /* 超出隐藏 */
+            background-image: url("http://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+        /*a{
+            display: inline-block;
+            text-decoration: none;
+            color: #424242;
+            width: 190px;
+            height: 90px;          !* 主要四句 *!
+            white-space: nowrap;  !* 不换行 *!
+            overflow: hidden;   !* 超出隐藏 *!
+            text-indent: 200px;   !*大于或者等于width*!
+            background-image: url("http://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }*/
+
+        .wrapper {
+            width: 320px;
+            padding: 30px;
+        }
+        .wrapper:hover {
+            width: 400px;
+        }
+        .wrapper img {
+            float: left;
+            width: 100px;
+            height: 100px;
+        }
+        .wrapper .right-wrapper {
+            /*margin-left: 100px;
+            vertical-align: top;*/
+        }
+        .wrapper .right-wrapper .item-one {
+            font-size: 20px;
+            line-height: 20px;
+            height: 40px;
+            color: #333;
+            margin-bottom: 18px;
+            overflow: hidden;
+        }
+        .wrapper .right-wrapper .item-two {
+            font-size: 12px;
+            color: #666;
+            line-height: 1.2em;
+        }
+    </style>
+</head>
+<body>
+<!--<a href="https://www.taobao.com/" target="_blank">淘宝网</a>-->
+<div class="wrapper">
+    <img src="./CSS/img/pic1.png">
+    <div class="right-wrapper">
+        <p class="item-one">{ 最多两行20px #333，顶部对齐图片，底部间距18px }</p>
+        <p class="item-two">{ 12px #666 行高1.2}使用语义化的HTML标签完成以下布局，考虑模块化和拓展性。
+            容器默认宽度320px，右侧。</p>
+    </div>
+</div>
+
+<script>
+    var x =1
+    function f() {
+        
+    }
+</script>
+<!--
+!important
+行间样式
+ID
+class| 属性| 伪类
+标签 | 伪元素（before、after、first-line、first-letter.....）
+通配符
+
+-->
+
+<!--文本溢出， 要打点展示
+1，单行文本
+   white-space: nowrap; /*不换行*/
+   overflow: hidden;
+   text-overflow: ellipsis;
+2，多行文本: 一般多行截断
+   或者：
+   .twoLine {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+}
+-->
+<!--图片与文字兼容问题  即当图片加载慢或者不显示的时候，显示文字
+<a href="https://www.taobao.com/" target="_blank">淘宝网</a>
+第一种方法
+a{
+            display: inline-block;
+            text-decoration: none;
+            color: #424242;
+            width: 190px;
+            height: 0;          /* 主要三句 */
+            padding-top: 90px;  /* 在padding部分显示图片*/
+            overflow: hidden;  /* 超出隐藏 */
+            background-image: url("http://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+ }
+
+第二种方法
+a{
+            display: inline-block;
+            text-decoration: none;
+            color: #424242;
+            width: 190px;
+            height: 90px;          !* 主要四句 *!
+            white-space: nowrap;  !* 不换行 *!
+            overflow: hidden;   !* 超出隐藏 *!
+            text-indent: 200px;   !*大于或者等于width*!
+            background-image: url("http://img.alicdn.com/tfs/TB1_uT8a5ERMeJjSspiXXbZLFXa-143-59.png");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+
+-->
+</body>
+</html>
