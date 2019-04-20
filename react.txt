@@ -1,0 +1,25 @@
+React---有状态组件和无状态组件
+1，有状态组件（继承自react.Component）：只有在需要管理状态或者需要使用生命周期
+例：class App extends react.Component{
+            construct(props){
+                super(props);
+                this.state = {}
+         }
+     }
+可以拥有状态，拥有生命周期
+可以通过this接受状态和属性
+this.state.XX & this.props.XX
+
+2，无状态组件（函数）：不进行数据处理
+const  App = (props) => {...}，其他事件使用
+不可以拥有状态，不拥有生命周期
+可以通过属性实现数据传递
+props.XX
+
+React生命周期
+
+componentWillMount()
+
+Redux --- 一个面向JavaScript应用的可预测状态容器
+例：组件通信 --A组件传值给B组件
+       某个状态需要在任何地方（组件）都可以拿到---token授权
